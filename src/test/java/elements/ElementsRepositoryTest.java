@@ -4,19 +4,19 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SetOfElementsTest
+class ElementsRepositoryTest
 {
     @Test
     void shouldGetElementByName()
     {
         // given
-        String elementName = "hel";
+        String elementName = "hydrogen";
 
         // when
-        Element element = new SetOfElements().getElement(elementName);
+        Element element = new ElementsRepository().find(elementName);
 
         // then
-        assertEquals("Hel", element.name);
+        assertEquals("Hydrogen", element.name);
     }
 
     @Test
@@ -26,10 +26,10 @@ class SetOfElementsTest
         String elementAlias = "hydrogenium";
 
         // when
-        Element element = new SetOfElements().getElement(elementAlias);
+        Element element = new ElementsRepository().find(elementAlias);
 
         // then
-        assertEquals("Hydrogenium", element.latinAlias);
+        assertEquals("Hydrogenium", element.alias);
     }
 
     @Test
@@ -39,7 +39,7 @@ class SetOfElementsTest
         String elementSymbol = "h";
 
         // when
-        Element element = new SetOfElements().getElement(elementSymbol);
+        Element element = new ElementsRepository().find(elementSymbol);
 
         // then
         assertEquals("H", element.symbol);
@@ -52,7 +52,7 @@ class SetOfElementsTest
         String elementName = "abc";
 
         // then
-        assertThrows(ElementNotFoundException.class, () -> new SetOfElements().getElement(elementName));
+        assertThrows(ElementNotFoundException.class, () -> new ElementsRepository().find(elementName));
     }
 
     @Test
@@ -62,22 +62,22 @@ class SetOfElementsTest
         String elementAlias = "HeLiUm";
 
         // when
-        Element element = new SetOfElements().getElement(elementAlias);
+        Element element = new ElementsRepository().find(elementAlias);
 
         // then
-        assertEquals("Hel", element.name);
+        assertEquals("Helium", element.name);
     }
 
     @Test
     void shouldTrimWhitespace()
     {
         // given
-        String elementName = " wodór  ";
+        String elementName = " lithium  ";
 
         // when
-        Element element = new SetOfElements().getElement(elementName);
+        Element element = new ElementsRepository().find(elementName);
 
         // then
-        assertEquals("Wodór", element.name);
+        assertEquals("Lithium", element.name);
     }
 }
