@@ -6,21 +6,21 @@ public class Element
     final String alias;
     final String symbol;
     final int atomicNumber;
-    final MetallicProperties metallicProperties;
+    final MetallicProperty metallicProperty;
     final int group;
     final int period;
     final State state;
     final double meltingPhase;
     final double boilingPhase;
 
-    public Element(String name, String alias, String symbol, int atomicNumber, MetallicProperties metallicProperties,
+    public Element(String name, String alias, String symbol, int atomicNumber, MetallicProperty metallicProperty,
                    int group, int period, State state, double meltingPhase, double boilingPhase)
     {
         this.name = name;
         this.alias = alias;
         this.symbol = symbol;
         this.atomicNumber = atomicNumber;
-        this.metallicProperties = metallicProperties;
+        this.metallicProperty = metallicProperty;
         this.group = group;
         this.period = period;
         this.state = state;

@@ -1,6 +1,6 @@
 package elements;
 
-public enum MetallicProperties
+public enum MetallicProperty
 {
     METAL, NON_METAL, NOBLE_GAS
 }

@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import static java.util.Arrays.asList;
-import static elements.MetallicProperties.*;
+import static elements.MetallicProperty.*;
 import static elements.State.*;
 
 public class ElementsRepository
