@@ -2,5 +2,5 @@ package elements;
 
 public enum MetallicProperty
 {
-    METAL, NON_METAL, NOBLE_GAS
+    METAL, HALF_METAL, NON_METAL, NOBLE_GAS
 }
