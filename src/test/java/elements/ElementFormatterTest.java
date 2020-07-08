@@ -6,7 +6,7 @@ import static elements.MetallicProperty.*;
 import static elements.State.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-class ElementInfoFormatterTest
+class ElementFormatterTest
 {
     @Test
     void shouldFormatElementInfo()
@@ -15,7 +15,7 @@ class ElementInfoFormatterTest
         Element element = new Element("Hydrogen", "Hydrogenium", "H", 1, METAL, 1, 1, GAS, -259.198, -252.762);
 
         // when
-        String actual = new ElementInfoFormatter().formatInfo(element);
+        String actual = new ElementFormatter().format(element);
 
         // then
         assertEquals("Name: Hydrogen\n" +
@@ -37,7 +37,7 @@ class ElementInfoFormatterTest
         Element element = new Element("Helium", "", "He", 2, NOBLE_GAS, 18, 1, GAS, -272.20, -268.928);
 
         // when
-        String actual = new ElementInfoFormatter().formatInfo(element);
+        String actual = new ElementFormatter().format(element);
 
         // then
         assertEquals("Name: Helium\n" +

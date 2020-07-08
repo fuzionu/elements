@@ -1,8 +1,8 @@
 package elements;
 
-public class ElementInfoFormatter
+public class ElementFormatter
 {
-    public String formatInfo(Element element)
+    public String format(Element element)
     {
         return "Name: " + element.name + "\n" +
                 "Alias: " + isAliasEmpty(element) + "\n" +
